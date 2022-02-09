@@ -38,8 +38,10 @@ export default {
   // コンポーネントを自動インポートする
   components: true,
 
-  // 存在しないページすべてを404ページにリダイレクトする
   router: {
+    // Github Pages のURLでうまく動くように
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/FrontendSample/' : '/',
+    // 存在しないページすべてを404ページにリダイレクトする
     extendRoutes(routes, resolve) {
       routes.push({
         name: 'custom',
