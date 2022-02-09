@@ -7,10 +7,10 @@ updates:
   schedule:
     interval: daily
     time: '00:00'
-  reviewers:
-    - octocat # プロジェクト管理者のユーザー名に変更する。(複数指定可)
-  assignees:
-    - octocat # 上に同じ。
+  # reviewers:
+  #   - octocat # プロジェクト管理者のユーザー名に変更する。(複数指定可)
+  # assignees:
+  #   - octocat # 上に同じ。
   commit-message:
     prefix: fix
     prefix-development: chore
@@ -21,10 +21,10 @@ updates:
   schedule:
     interval: daily
     time: '00:00'
-  reviewers:
-    - octocat # これも。
-  assignees:
-    - octocat # もちろんこれも。
+  # reviewers:
+  #   - octocat # これも。
+  # assignees:
+  #   - octocat # もちろんこれも。
   commit-message:
     prefix: fix
     prefix-development: chore
