@@ -14,12 +14,7 @@ env:
 
 jobs:
   ci:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -28,7 +23,7 @@ jobs:
       - name: Setup node env
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: ${{ matrix.node }}
+          node-version: "16"
           check-latest: true
 
       - name: Cache node_modules
@@ -36,7 +31,7 @@ jobs:
         id: yarn-cache
         with:
           path: ${YARN_CACHE_FOLDER}
-          key: ${{ runner.os }}-yarn-v1
+          key: ${{ runner.os }}-yarn-v2
 
       - name: Install dependencies
         run: yarn
